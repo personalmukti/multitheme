@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ThemeOneController;
+use App\Http\Controllers\ThemeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +18,7 @@ Route::get('/', function () {
     return view('menu');
 });
 
-Route::get('/theme-one', [ThemeOneController::class, 'index'])->name('theme.one');
+Route::get('/theme-one', [ThemeController::class, 'themeOne'])->name('theme.one');
+Route::get('/theme-two', [ThemeController::class, 'themeTwo'])->name('theme.two');
+Route::get('/theme-three', [ThemeController::class, 'themeThree'])->name('theme.three');
 
